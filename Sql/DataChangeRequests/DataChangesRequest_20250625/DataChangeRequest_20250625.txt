@@ -1,0 +1,212 @@
+-- SQL Server Instance: smg-sql01
+USE [SimpleFileMover8];
+
+-- Insert 'Source' record for HumanaCensusADT
+SELECT 1;
+-- 1 record 
+
+BEGIN TRAN
+  INSERT INTO [dbo].[SimpleFileMover8_Config]
+           ([Enabled]
+           ,[SystemName]
+           ,[SourceDirectory]
+           ,[SearchRootSourceDirectory]
+           ,[SearchSubdirectoriesOfRootSourceDirectory]
+           ,[RequiredFilePrefix]
+           ,[DeleteSourceFile]
+           ,[ConfigWebApiUrl]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (1
+           ,'HumanaCensusADT'
+           ,'\\ps-nas\NAS\SSS\VBC\1. Care Coordination\ADMIN ASSISTANT\ADT FEEDS\Humana Census Simplifier (do not use)\OutputToSummitADTProcessingArchive'
+           ,1
+           ,0
+           ,'HumanaCensus'
+           ,1
+           ,'http://webservices:8085/api/Ops/GetMySimpleFileMover8Config'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+
+-- COMMIT
+-- ROLLBACK
+-----------------------------------------------------------------------------------------------
+-- Retrieve Pk value of the entry just entered.
+DECLARE @SimpleFileMover8_ConfigID [int] = 0;
+SELECT @SimpleFileMover8_ConfigID = [Pk]
+FROM [dbo].[SimpleFileMover8_Config]
+WHERE [SystemName] = 'HumanaCensusADT';
+
+-----------------------------------------------------------------------------------------------
+  -- Destination directory 1 - Wes' input directory for Import.
+  SELECT 1;
+  -- 1 record 
+  
+  
+ INSERT INTO [dbo].[SimpleFileMover8_Config_DestDirs]
+           ([SimpleFileMover8_ConfigPk]
+           ,[DestDir]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'\\ps-nas\nas\SSS\IT\Shared\SSS ODS\ADT Feeds\HumanaCensus\Pending'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+                             
+-----------------------------------------------------------------------------------------------
+  -- Destination directory 2 - 'Moved' Archive for Humana Census
+  SELECT 1;
+  -- 1 record 
+
+ INSERT INTO [dbo].[SimpleFileMover8_Config_DestDirs]
+           ([SimpleFileMover8_ConfigPk]
+           ,[DestDir]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'\\ps-nas\NAS\SSS\VBC\1. Care Coordination\ADMIN ASSISTANT\ADT FEEDS\Humana Census Simplifier (do not use)\OutputToSummitADTProcessingArchive\Moved'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+-----------------------------------------------------------------------------------------------
+  -- Destination directory 3 - The queue for SFTP'ing to the Athena Humana folder.
+  SELECT 1;
+  -- 1 record 
+
+ INSERT INTO [dbo].[SimpleFileMover8_Config_DestDirs]
+           ([SimpleFileMover8_ConfigPk]
+           ,[DestDir]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'\\smg-sql01\AthenaFiles\Humana'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+
+-----------------------------------------------------------------------------------------------
+
+  -- Email Notification 1 - clmoyle@summithealthcare.com
+  
+  SELECT 1;
+  -- 1 record 
+  
+  INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'clmoyle@summithealthcare.com' 
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+-----------------------------------------------------------------------------------------------
+  -- Email Notification 2 - pwmorrison@summithealthcare.com
+
+  SELECT 1;
+  -- 1 record 
+  
+  INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'pwmorrison@summithealthcare.com' 
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+  
+-----------------------------------------------------------------------------------------------
+  -- Email Notification 3 - jbrashears@summithealthcare.com
+
+  SELECT 1;
+  -- 1 record 
+  
+  INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'jbrashears@summithealthcare.com' 
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+  
+  
+-----------------------------------------------------------------------------------------------
+-- Email Notification 4 - blmckinnis@summithealthcare.com
+
+  SELECT 1;
+  -- 1 record 
+  
+  INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+  VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'blmckinnis@summithealthcare.com' 
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+
+-----------------------------------------------------------------------------------------------
+-- Email Notification 5 - hgossett@summithealthcare.com
+
+  SELECT 1;
+  -- 1 record 
+  
+  
+  INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+  VALUES
+           (@SimpleFileMover8_ConfigID
+           ,'hgossett@summithealthcare.com' 
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+  
+-----------------------------------------------------------------------------------------------

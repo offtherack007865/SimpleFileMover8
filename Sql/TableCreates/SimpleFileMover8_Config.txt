@@ -1,0 +1,482 @@
+-- check to see if table exists in INFORMATION_SCHEMA.TABLES - ignore DROP TABLE if it does not
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'SimpleFileMover8_Config' AND TABLE_SCHEMA = 'dbo')
+   DROP TABLE [dbo].[SimpleFileMover8_Config];
+GO
+
+CREATE TABLE [dbo].[SimpleFileMover8_Config](
+	[Pk] [bigint] IDENTITY(1,1) NOT NULL
+	,[Enabled] [bit]
+	,[SystemName] [nvarchar] (300) NOT NULL
+	,[SourceDirectory] [nvarchar] (300) NOT NULL
+	,[SearchRootSourceDirectory] [bit]
+	,[SearchSubdirectoriesOfRootSourceDirectory] [bit]
+	,[RequiredFilePrefix] [nvarchar] (300) NOT NULL
+	,[DeleteSourceFile] [bit]
+	,[ConfigWebApiUrl] [nvarchar] (300) NOT NULL
+	,[CreatedBy] [nvarchar](100) NOT NULL
+	,[CreatedTimestamp] [datetime] NOT NULL
+	,[UpdatedBy] [nvarchar](100) NOT NULL
+	,[UpdatedTimestamp] [datetime] NOT NULL
+ CONSTRAINT [PK_SimpleFileMover8_Config] PRIMARY KEY CLUSTERED 
+(
+	[Pk] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+-- VHAN
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'VHAN' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Aetna_IP_Summit Medical Group_' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- BCBST Inpatient
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'BCBST Inpatient' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\BCBST_ADT_Feeds'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'SummitHealth_Inpatient_Report' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- BCBST Discharge
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'BCBST Discharge' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\BCBST_ADT_Feeds'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'SummitHealth_Discharge_Report' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Ethin
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Ethin' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\NAS\SSS\FeedDrops\Ethin'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'etHIN Discharges' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Cigna
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Cigna' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\NAS\SSS\FeedDrops\Cigna'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Cigna_ADT_' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Nextgen
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Nextgen' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\Universal_American\ADTFeed'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'MemberMatch Extract -' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Laughlin
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Laughlin' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\Laughlin_ADT_Feeds'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Summit_' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Tennova
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Tennova' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\Tennova_FTP_Default\upload'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'tennova-summit' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Humana
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Humana' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\NAS\SMG\Sites\STAR\CovenantFileDrop\Humana'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Summit_Admits-DC-Obs_Rpt_' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Covenant
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Covenant' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\smg-ftp\Covenant_ADT_Feeds'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'_PatientsDischarged.csv' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Altruista Tncare Inpatient
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Altruista Tncare Inpatient' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\NAS\SSS\FeedDrops\ValueBasedCare'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Tncare Inpatient' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+-- Altruista Tncare ER
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'Altruista Tncare ER' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\NAS\SSS\FeedDrops\ValueBasedCare'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'Tncare ER' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+
+-- TennCareCollections8Collections
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'TennCareCollections8Collections' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\BackUpToDisk\Development\AttachmentExtraction\extract@summithealthcare.com\TennCareEligibilityCollections_CollectionsFiles\SummItUP@summithealthcare.com'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'TennCareCollections' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);
+
+
+-- TennCareCollections8Dunning
+insert into [dbo].[SimpleFileMover8_Config]
+(
+    [SystemName]
+	,[Enabled]
+	,[SourceDirectory]
+	,[SearchRootSourceDirectory]
+	,[SearchSubdirectoriesOfRootSourceDirectory]
+	,[RequiredFilePrefix]
+	,[DeleteSourceFile]
+	,[ConfigWebApiUrl]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+   'TennCareCollections8Dunning' --[SystemName]
+   ,1 -- [Enabled]
+   ,'\\ps-nas\BackUpToDisk\Development\AttachmentExtraction\extract@summithealthcare.com\TennCareEligibilityCollections_DunningFiles\SummItUP@summithealthcare.com'	--[SourceDirectory]
+   --'f:\FTP\Vanderbilt_Health_Affiliate_Network\Files'	--[SourceDirectory]
+   ,1 --[SearchRootSourceDirectory]
+   ,0 --[SearchSubdirectoriesOfRootSourceDirectory]
+   ,'TennCareCollections' --[RequiredFilePrefix]
+   ,1 --[DeleteSourceFile]
+   ,'http://webservices:3031/api/Configs/GetConfigs' --[ConfigWebApiUrl]
+   ,'pwmorrison' --[CreatedBy]
+   ,getdate() --[CreatedTimestamp]
+   ,'pwmorrison' --[UpdatedBy]
+   ,getdate() --[UpdatedTimestamp]
+);

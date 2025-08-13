@@ -1,0 +1,38 @@
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND OBJECT_ID = OBJECT_ID('dbo.spGetMySimpleFileMover8Config'))
+   drop proc [dbo].[spGetMySimpleFileMover8Config]
+GO
+CREATE PROCEDURE [dbo].[spGetMySimpleFileMover8Config] 
+AS
+BEGIN
+
+  select isnull(cfg.[SystemName], '') as [SystemName]
+	     ,cfg.[Enabled]
+	     ,isnull(cfg.[SourceDirectory], '') as [SourceDirectory]
+	     ,isnull(cfg.[SearchRootSourceDirectory], '') as [SearchRootSourceDirectory]
+	     ,cfg.[SearchSubdirectoriesOfRootSourceDirectory]
+	     ,isnull(cfg.[RequiredFilePrefix], '') as [RequiredFilePrefix]
+	     ,cfg.[DeleteSourceFile]
+		 ,cfg.[ConfigWebApiUrl]
+         ,isnull(STUFF((SELECT  '; ' + [DestDir]
+                    FROM    
+					( SELECT DISTINCT [DestDir]
+                        FROM  [dbo].[SimpleFileMover8_Config_DestDirs] dir
+					   where dir.[SimpleFileMover8_ConfigPk] = cfg.[PK]
+                    ) x
+                  FOR
+                  XML PATH('')
+                ), 1, 2, ''),'') [DestDirs]
+         ,isnull(STUFF((SELECT  '; ' + [EmailAddress]
+                    FROM    
+					( SELECT DISTINCT [EmailAddress]
+                        FROM  [dbo].[SimpleFileMover8_Config_Emailees] eml
+					   where eml.[SimpleFileMover8_ConfigPk] = cfg.[PK]
+                    ) x
+                  FOR
+                  XML PATH('')
+                ), 1, 2, ''),'') [Emailees]
+    from [dbo].[SimpleFileMover8_Config] cfg
+   where cfg.[Enabled] = 1
+
+
+END	

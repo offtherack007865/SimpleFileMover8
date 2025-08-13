@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=vs-dev-db;Database=SimpleFileMover8;TrustServerCertificate=True;Trusted_Connection=true;" -t SimpleFileMover8_Config Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Project "SimpleFileMover8.Data"

@@ -1,0 +1,15 @@
+-- SQL Server Instance: smg-sql01
+USE [SimpleFileMover8];
+
+-- Update the RequiredFilePrefix from 'NRC_' to 'NRC'
+
+  SELECT 1;
+  -- 1 record 
+
+BEGIN TRAN
+UPDATE [dbo].[SimpleFileMover8_Config]
+SET [RequiredFilePrefix] = 'NRC'
+WHERE [Pk] = 24;
+           
+-- COMMIT
+-- ROLLBACK

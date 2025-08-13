@@ -1,0 +1,2278 @@
+-- check to see if table exists in INFORMATION_SCHEMA.TABLES - ignore DROP TABLE if it does not
+IF EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'SimpleFileMover8_Config_Emailees' AND TABLE_SCHEMA = 'dbo')
+   DROP TABLE [dbo].[SimpleFileMover8_Config_Emailees];
+GO
+
+CREATE TABLE [dbo].[SimpleFileMover8_Config_Emailees](
+	[Pk] [bigint] IDENTITY(1,1) NOT NULL
+	,[SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+	,[EmailAddress] [nvarchar] (300) NOT NULL
+	,[CreatedBy] [nvarchar](100) NOT NULL
+	,[CreatedTimestamp] [datetime] NOT NULL
+	,[UpdatedBy] [nvarchar](100) NOT NULL
+	,[UpdatedTimestamp] [datetime] NOT NULL
+ CONSTRAINT [PK_SimpleFileMover8_Config_Emailees] PRIMARY KEY CLUSTERED 
+(
+	[Pk] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+-------------------------------------------------------------------
+-- VHAN
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-------------------------------------------------------------------
+-- BCBST In-Patient
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- BCBST Discharge
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-------------------------------------------------------------------
+-- Ethin
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- Cigna
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- NextGen
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- Laughlin
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- Tennova
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------
+-- Humana
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+
+-------------------------------------------------------------------
+-- Covenant
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+
+
+-------------------------------------------------------------------
+-- Altruista TnCare In-Patient
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-------------------------------------------------------------------
+-- Altruista TnCare ER
+-------------------------------------------------------------------
+-- Cynthia Moyle
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'clmoyle@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Philip Morrison
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Hunter Grayson
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgrayson@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Sage Brashears
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'jbrashears@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Kaitlin Bray
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'knbray@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- blmoates@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmoates@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- wes@weneco.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'wes@weneco.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- Brittany McKinnis
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'blmckinnis@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-------------------------------------------------------------------
+-- Add hgossett@summithealthcare.com to all move types.
+-------------------------------------------------------------------
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    1 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    2 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    3 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    4 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    5 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    6 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    8 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    9 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    10 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    11 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+-- hgossett@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    12 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'hgossett@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+-- For TennCareCollections pwmorrison@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    19 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+-- For TennCareDunning pwmorrison@summithealthcare.com
+insert into [dbo].[SimpleFileMover8_Config_Emailees]
+(
+    [SimpleFileMover8_ConfigPk]
+	,[EmailAddress]
+	,[CreatedBy]
+	,[CreatedTimestamp]
+	,[UpdatedBy]
+	,[UpdatedTimestamp]
+)
+values
+(
+    20 -- [SimpleFileMover8_ConfigPk] [bigint] NOT NULL
+    ,'pwmorrison@summithealthcare.com' -- [EmailAddress] [nvarchar] (300) NOT NULL
+    ,'pwmorrison'  -- [CreatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [CreatedTimestamp] [datetime] NOT NULL
+    ,'pwmorrison'  -- [UpdatedBy] [nvarchar](30) NOT NULL
+    ,getdate() -- [UpdatedTimestamp] [datetime] NOT NULL
+);
+
+
+
+
+
+
+
+
+
+
+
+
+

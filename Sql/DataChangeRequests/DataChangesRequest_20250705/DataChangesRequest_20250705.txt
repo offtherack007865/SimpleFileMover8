@@ -1,0 +1,112 @@
+-- SQL Server Instance: smg-sql01
+USE [SimpleFileMover8];
+
+-- Insert source Simple File Mover entry for moving NRC Athena report files
+-- to the source folder for the convert to NRC format program.
+
+  SELECT 1;
+  -- 1 record 
+
+BEGIN TRAN
+INSERT INTO [dbo].[SimpleFileMover8_Config]
+           ([Enabled]
+           ,[SystemName]
+           ,[SourceDirectory]
+           ,[SearchRootSourceDirectory]
+           ,[SearchSubdirectoriesOfRootSourceDirectory]
+           ,[RequiredFilePrefix]
+           ,[DeleteSourceFile]
+           ,[ConfigWebApiUrl]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (1
+           ,'Nrc'
+           ,'\\smg-ftp\Athena\NRC_Health'
+           ,1
+           ,0
+           ,'NRC_'
+           ,1
+           ,'http://webservices:8085/api/Ops/GetMySimpleFileMover8Config'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+           
+-- COMMIT
+-- ROLLBACK
+           
+---------------------------------------------------------------------------------
+-- Get the NRC Pk
+DECLARE @Pk [bigint] = 0;
+
+SELECT @Pk = [Pk]
+FROM [dbo].[SimpleFileMover8_Config]
+WHERE [SystemName] = 'Nrc';
+
+IF (@Pk IS NULL OR @Pk <= 0) BEGIN
+  RETURN;
+END
+
+--------------------------------------------------------------------------------
+
+-- Use the 'found' Pk to Insert destination Simple File Mover entry for moving NRC Athena report files
+-- to the source folder for the convert to NRC format program.
+
+  SELECT 1;
+  -- 1 record 
+
+BEGIN TRAN
+
+INSERT INTO [dbo].[SimpleFileMover8_Config_DestDirs]
+           ([SimpleFileMover8_ConfigPk]
+           ,[DestDir]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@Pk
+           ,'\\ps-nas\NAS\SSS\HUMANRS\Patient Experience\Nrc'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+
+
+           
+-- COMMIT
+-- ROLLBACK
+           
+---------------------------------------------------------------------------------
+
+-- Use the 'found' Pk to Insert Email address notification for the move
+-- to the source folder for the convert to NRC format program.
+
+  SELECT 1;
+  -- 1 record 
+
+BEGIN TRAN
+
+INSERT INTO [dbo].[SimpleFileMover8_Config_Emailees]
+           ([SimpleFileMover8_ConfigPk]
+           ,[EmailAddress]
+           ,[CreatedBy]
+           ,[CreatedTimestamp]
+           ,[UpdatedBy]
+           ,[UpdatedTimestamp])
+     VALUES
+           (@Pk
+           ,'pwmorrison@summithealthcare.com'
+           ,'pwmorrison'
+           ,getdate()
+           ,'pwmorrison'
+           ,getdate());
+
+           
+-- COMMIT
+-- ROLLBACK
+           
+---------------------------------------------------------------------------------
