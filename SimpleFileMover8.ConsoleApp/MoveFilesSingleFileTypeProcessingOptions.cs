@@ -46,7 +46,7 @@ namespace SimpleFileMover8.ConsoleApp1
                 prefixedFiles =
                     d.GetFiles
                     (
-                        $"{MyMoveFilesSingleFileTypeProcessingOptions
+                        $"*{MyMoveFilesSingleFileTypeProcessingOptions
                             .mySpGetMySimpleFileMover8ConfigOutputColumns
                             .RequiredFilePrefix}*.*");
             FileInfo[]

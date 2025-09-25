@@ -58,9 +58,9 @@
               "Title": "MoveFilesSingleFileTypeProcessingOptions.cs",
               "DocumentMoniker": "D:\\source\\repos\\SimpleFileMover8\\SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs",
               "RelativeDocumentMoniker": "SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs",
-              "ToolTip": "D:\\source\\repos\\SimpleFileMover8\\SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs*",
-              "RelativeToolTip": "SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs*",
-              "ViewState": "AgIAACUAAAAAAAAAAAAUwDYAAAAoAAAAAAAAAA==",
+              "ToolTip": "D:\\source\\repos\\SimpleFileMover8\\SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs",
+              "RelativeToolTip": "SimpleFileMover8.ConsoleApp\\MoveFilesSingleFileTypeProcessingOptions.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwDAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T16:57:33.865Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "RelativeToolTip": "SimpleFileMover8.ConsoleApp\\Program.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:56:45.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T16:56:45.124Z"
             },
             {
               "$type": "Document",
@@ -86,7 +85,7 @@
               "RelativeDocumentMoniker": "SimpleFileMover8.ConsoleApp\\MainOps.cs",
               "ToolTip": "D:\\source\\repos\\SimpleFileMover8\\SimpleFileMover8.ConsoleApp\\MainOps.cs",
               "RelativeToolTip": "SimpleFileMover8.ConsoleApp\\MainOps.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T16:56:37.011Z",
               "EditorCaption": ""
