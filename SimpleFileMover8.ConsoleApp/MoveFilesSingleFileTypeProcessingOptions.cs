@@ -69,8 +69,27 @@ namespace SimpleFileMover8.ConsoleApp1
                 Files.Add(loopSuffixedFi);
             }
 
+            // Eliminate Duplicate Files in list.
+            List<FileInfo> uniqueFiList =
+                new List<FileInfo>();
+            foreach (FileInfo loopFi in Files)
+            {
+                bool filenameFoundInUniqueFileList = false;
+                foreach (FileInfo loopUniqueFi in uniqueFiList)
+                {
+                    if (loopUniqueFi.FullName.CompareTo(loopFi.FullName) == 0)
+                    {
+                        filenameFoundInUniqueFileList = true;
+                        break;
+                    }
+                }
+                if (!filenameFoundInUniqueFileList)
+                {
+                    uniqueFiList.Add(loopFi);
+                }
+            }
 
-            if (Files.Count > 0)
+            if (uniqueFiList.Count > 0)
             {
                 string[]
                     destDirPartsArray =
@@ -100,9 +119,9 @@ namespace SimpleFileMover8.ConsoleApp1
                     }
                 }
 
-                EmailSubjectLine = $"The {MyMoveFilesSingleFileTypeProcessingOptions.mySpGetMySimpleFileMover8ConfigOutputColumns.SystemName} system had {Files.Count} file(s) moved to {DestDirList.Count} destination locations..";
+                EmailSubjectLine = $"The {MyMoveFilesSingleFileTypeProcessingOptions.mySpGetMySimpleFileMover8ConfigOutputColumns.SystemName} system had {uniqueFiList.Count} file(s) moved to {DestDirList.Count} destination locations..";
 
-                foreach (FileInfo loopFi in Files)
+                foreach (FileInfo loopFi in uniqueFiList)
                 {
                     for (int destCtr = 0; destCtr < DestDirList.Count; destCtr++)
                     {
@@ -112,14 +131,23 @@ namespace SimpleFileMover8.ConsoleApp1
                         {
                             System.IO.File.Delete(destFullFilename);
                         }
-                            if (MyMoveFilesSingleFileTypeProcessingOptions.mySpGetMySimpleFileMover8ConfigOutputColumns.DeleteSourceFile && destCtr == (DestDirList.Count - 1))
+                        if (MyMoveFilesSingleFileTypeProcessingOptions.mySpGetMySimpleFileMover8ConfigOutputColumns.DeleteSourceFile && destCtr == (DestDirList.Count - 1))
                         {
-                            System.IO.File.Move(loopFi.FullName, destFullFilename);
+                            System.IO.File.Copy(loopFi.FullName, destFullFilename);
+                            if (System.IO.File.Exists(loopFi.FullName))
+                            {
+                                System.IO.File.Delete(loopFi.FullName);
+                            }
                         }
                         else
                         {
                             System.IO.File.Copy(loopFi.FullName, destFullFilename);
                         }
+
+                        bool destFileNowThere = 
+                            System.IO.File.Exists(destFullFilename);
+                        log.Info($"Checking to see if Copy Worked for {destFullFilename}: destFileNowThere = {destFileNowThere}");
+
 
                         // Break up the Source path into directory names.
                         List<string>

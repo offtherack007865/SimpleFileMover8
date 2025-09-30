@@ -26,16 +26,17 @@ namespace SimpleFileMover8.ConsoleApp1
             MyMainOutput returnOutput = new MyMainOutput();
             foreach (spGetMySimpleFileMover8ConfigOutputColumns configLoop in MyMoveFilesMainProcessingConfig.MySpGetMySimpleFileMover8ConfigOutputColumnsList)
             {
+                
                 MoveFilesSingleFileTypeProcessingOptions myMoveFilesSingleFileTypeProcessingOptions =
                     new MoveFilesSingleFileTypeProcessingOptions(MyMoveFilesMainProcessingConfig.MyConfigOptions, configLoop);
                 MoveFilesSingleFileTypeProcessing mySingleFileProcessing =
-                    new MoveFilesSingleFileTypeProcessing
-                        (
-                            myMoveFilesSingleFileTypeProcessingOptions
-                        );
+                    new     MoveFilesSingleFileTypeProcessing
+                            (
+                                myMoveFilesSingleFileTypeProcessingOptions
+                            );
                 mySingleFileProcessing.MoveSingleFileType();
-                    log.Info("Completed moving files for: " + configLoop.SystemName);
-                }
+                log.Info("Completed moving files for: " + configLoop.SystemName);
+            }
             return returnOutput;
         }
 
